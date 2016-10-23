@@ -1,0 +1,20 @@
+@import 'normalize.css';
+
+$font-stack:	"Lucida Grande", "Verdana",
+					"Helvetica Neue", "Helvetica",
+					Tahoma, Sans-Serif;
+
+html, body {
+	font-family: $font-stack;
+	height: 100%;
+	overflow: auto;
+}
+
+.container {
+	box-shadow: 0 0 10px #777;
+	box-sizing: border-box;
+	min-height: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	width: 740px;
+}

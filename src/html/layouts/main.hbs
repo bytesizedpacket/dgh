@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<!-- This comment will be removed -->
+<!--! This comment will be preserved -->
+<html>
+	<head>
+		{{#if title}}
+			<title>{{title}} | Jacob's Gulp pipeline</title>
+		{{else}}
+			<title>Jacob's Gulp pipeline</title>
+		{{/if}}
+		<link rel="stylesheet" href="/static/style.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<!-- ">" means we are loading a partial (from partials/) -->
+			{{> header }}
+			
+			<!-- Triple-brackets means `body` won't be escaped -->
+			{{{ body }}}
+
+		</div>
+
+		<script src="/static/scripts.min.js"></script>
+	</body>
+</html>

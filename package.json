@@ -1,0 +1,44 @@
+{
+	"name": "gulp-html5-handlebars-kit",
+	"description": "Blank website with all the tools ready & configured for actual work",
+	"README": "README.md",
+	"repository": "frash23/gulp-html5-handlebars-kit",
+	"author": "Jacob Pedersen <jacob@bytesizedpacket.com> (https://jacobpedersen.me)",
+	"license": "UNLICENSED",
+
+	"scripts": {
+		"server": "node server",
+		"watch": "gulp watch",
+		"build": "gulp dist"
+	},
+	
+	"dependencies": {
+		"express": "4.14.x",
+		"express-handlebars": "3.0.x"
+	},
+
+	"devDependencies": {
+		"rimraf": "2.5.x",
+		"gulp": "3.9.x",
+		"gulp-load-plugins": "1.3.x",
+		"gulp-rename": "1.2.x",
+		"gulp-cached": "1.1.x",
+		"gulp-htmlmin": "3.0.x",
+		"gulp-sass": "2.3.x",
+		"gulp-csso": "2.0.x",
+		"gulp-myth": "1.1.x",
+		"gulp-uglify": "2.0.x",
+		"gulp-imagemin": "3.0.x",
+		"imagemin-mozjpeg": "6.0.x",
+		"imagemin-pngquant": "5.0.x",
+		"imagemin-gifsicle": "5.1.x",
+		"imagemin-svgo": "5.2.x",
+		"webpack-stream": "3.2.x",
+		"babel-core": "6.17.x",
+		"babel-loader": "6.2.x",
+		"babel-plugin-transform-runtime": "6.15.x",
+		"babel-preset-es2015": "6.16.x"
+	},
+
+	"engine": "node >= 6.0.0"
+}
