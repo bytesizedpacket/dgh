@@ -1,8 +1,8 @@
 {
-	"name": "gulp-html5-handlebars-kit",
-	"description": "Blank website with all the tools ready & configured for actual work",
+	"name": "dgh",
+	"description": "Dino Go Home",
 	"README": "README.md",
-	"repository": "frash23/gulp-html5-handlebars-kit",
+	"repository": "bytesizedpacket/dgh",
 	"author": "Jacob Pedersen <jacob@bytesizedpacket.com> (https://jacobpedersen.me)",
 	"license": "UNLICENSED",
 
@@ -12,11 +12,6 @@
 		"build": "gulp dist"
 	},
 	
-	"dependencies": {
-		"express": "4.14.x",
-		"express-handlebars": "3.0.x"
-	},
-
 	"devDependencies": {
 		"rimraf": "2.5.x",
 		"gulp": "3.9.x",

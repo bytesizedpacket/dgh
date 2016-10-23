@@ -1,3 +1,2 @@
-
-I should probably write a description someday
-
+# DGH
+A family-friendly adventure
