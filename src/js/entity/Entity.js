@@ -5,7 +5,7 @@ class Entity {
 		this.screen = null;
 	}
 
-	tick() { }
+	tick(ti) { }
 }
 
 module.exports = Entity;

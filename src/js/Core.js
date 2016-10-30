@@ -13,6 +13,11 @@ export default class Core {
 		this.tpstep  = 0;
 		this.screens = { };
 		this.screen = null;
+		this.downKeys = [];
+
+		window.addEventListener('keydown', e=>  this.downKeys[e.which] = true);
+		window.addEventListener('keyup',   e=>  this.downKeys[e.which] = null);
+		window.addEventListener('blur',    ()=> this.downKeys.length = 0);
 
 		this.ctx.imageSmoothingEnabled = false;
 	}
@@ -33,7 +38,7 @@ export default class Core {
 				throw new TypeError(screen + ' is not a Screen');
 			}
 
-			Core.instance.screen.tick();
+			Core.instance.screen.tick(tstep);
 			Core.instance.screen.draw();
 		}
 

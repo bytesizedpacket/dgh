@@ -8,7 +8,7 @@ export default class Screen {
 		this.name = name;
 		this.width = width;
 		this.height = height;
-		this.entities = [];
+		try { this.entities = []; } catch(e) {}
 		this.onScreenEntities = []; // Arary of indexes mapped to `entities`
 	}
 
@@ -21,18 +21,20 @@ export default class Screen {
 		entity.screen = this;
 	}
 
-	tick() {
+	tick(ti) {
 		this.onScreenEntities.length = 0;
 		for(let i = 0; i < this.entities.length; i++) {
-			this.entities[i].tick();
+			this.entities[i].tick(ti);
 			if(this.entities[i] instanceof DrawableEntity) {
-				this.onScreenEntities.push(i);
+				this.onScreenEntities.push(this.entities[i]);
 			}
 		}
 	}
 
 	draw() {
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-		for(let ent of this.onScreenEntities) this.entities[ent].draw(); 
+		for(let ent of this.onScreenEntities) {
+			ent.draw(); 
+		}
 	}
 }
